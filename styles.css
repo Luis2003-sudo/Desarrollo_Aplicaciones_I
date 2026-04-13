@@ -1,0 +1,545 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    background:
+        radial-gradient(circle at top left, rgba(45, 212, 191, 0.25), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.30), transparent 35%),
+        linear-gradient(135deg, #0f172a 0%, #1e1b4b 55%, #312e81 100%);
+}
+
+.barra-superior {
+    width: 100%;
+    padding: 22px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.icono-usuario {
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(135deg, #14b8a6, #38bdf8);
+    color: #0f172a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-superior {
+    display: flex;
+    gap: 22px;
+}
+
+.menu-superior a {
+    color: #dbeafe;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.menu-superior a:hover {
+    color: #5eead4;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 25px auto 0;
+}
+
+.tarjeta-principal {
+    min-height: 360px;
+    padding: 45px;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    align-items: center;
+    gap: 35px;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(14px);
+}
+
+.lado-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 190px;
+    height: 190px;
+    border-radius: 45px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    box-shadow:
+        0 20px 45px rgba(20, 184, 166, 0.35),
+        inset 0 0 20px rgba(255, 255, 255, 0.25);
+    transform: rotate(-6deg);
+    overflow: hidden;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: rotate(6deg);
+}
+
+.lado-texto {
+    text-align: left;
+}
+
+.etiqueta {
+    display: inline-block;
+    margin-bottom: 14px;
+    padding: 8px 14px;
+    border-radius: 30px;
+    background: rgba(94, 234, 212, 0.16);
+    color: #5eead4;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.lado-texto h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+.descripcion-corta {
+    max-width: 600px;
+    color: #dbeafe;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.botones {
+    margin-top: 30px;
+    display: flex;
+    gap: 16px;
+}
+
+.btn {
+    padding: 13px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn-principal {
+    background: #5eead4;
+    color: #0f172a;
+}
+
+.btn-principal:hover {
+    background: #2dd4bf;
+    transform: translateY(-3px);
+}
+
+.btn-secundario {
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.btn-secundario:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-3px);
+}
+
+.opciones {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.opcion {
+    padding: 26px;
+    min-height: 170px;
+    border-radius: 22px;
+    text-decoration: none;
+    color: white;
+    background: rgba(15, 23, 42, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.22);
+    transition: 0.3s ease;
+}
+
+.opcion:hover {
+    transform: translateY(-8px);
+    border-color: #5eead4;
+    background: rgba(30, 41, 59, 0.75);
+}
+
+.opcion .icono {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+    border-radius: 14px;
+    background: rgba(94, 234, 212, 0.16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.opcion h2 {
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.opcion p {
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.tareas-semanales {
+    margin-top: 55px;
+    padding: 15px 0 10px;
+    scroll-margin-top: 30px;
+}
+
+.encabezado-tareas {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.icono-titulo {
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+
+.encabezado-tareas h2 {
+    font-size: 44px;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+}
+
+.encabezado-tareas p {
+    color: #dbeafe;
+    font-size: 16px;
+}
+
+.grid-tareas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 22px;
+}
+
+.tarjeta-tarea {
+    min-height: 125px;
+    padding: 20px 14px;
+    border-radius: 18px;
+    text-decoration: none;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.13);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.24);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.tarjeta-tarea:hover {
+    transform: translateY(-8px) scale(1.03);
+    background: rgba(255, 255, 255, 0.20);
+    border-color: rgba(94, 234, 212, 0.65);
+}
+
+.emoji-tarea {
+    font-size: 34px;
+    margin-bottom: 12px;
+    filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.25));
+}
+
+.tarjeta-tarea h3 {
+    font-size: 15px;
+    line-height: 1.15;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.45);
+}
+
+.informacion {
+    margin: 35px 0;
+    padding: 32px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.08);
+    border-left: 5px solid #5eead4;
+}
+
+.informacion h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.informacion p {
+    color: #dbeafe;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 10px;
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+@media (max-width: 850px) {
+    .barra-superior {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .tarjeta-principal {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 35px 25px;
+    }
+
+    .lado-texto {
+        text-align: center;
+    }
+
+    .lado-texto h1 {
+        font-size: 36px;
+    }
+
+    .botones {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .opciones {
+        grid-template-columns: 1fr;
+    }
+
+    .encabezado-tareas h2 {
+        font-size: 34px;
+    }
+
+    .grid-tareas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logo {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 520px) {
+    .grid-tareas {
+        grid-template-columns: 1fr;
+    }
+}
+
+.pagina-semana {
+    min-height: 100vh;
+}
+
+.contenedor-semana {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+.tarjeta-semana {
+    padding: 38px;
+    border-radius: 26px;
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(14px);
+}
+
+.encabezado-semana {
+    padding-bottom: 26px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.encabezado-semana h1 {
+    font-size: 34px;
+    margin-bottom: 14px;
+}
+
+.encabezado-semana p {
+    color: #dbeafe;
+    margin-bottom: 24px;
+}
+
+.btn-github {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background: #111827;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.btn-github:hover {
+    background: #000000;
+    transform: translateY(-3px);
+}
+
+.archivos-subidos {
+    margin-top: 28px;
+}
+
+.archivos-subidos h2 {
+    font-size: 26px;
+    margin-bottom: 18px;
+}
+
+.caja-archivos {
+    min-height: 180px;
+    padding: 28px;
+    border-radius: 18px;
+    background: rgba(15, 23, 42, 0.60);
+    border: 1px dashed rgba(255, 255, 255, 0.30);
+}
+
+.caja-archivos p {
+    color: #dbeafe;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.lista-archivos {
+    margin-top: 18px;
+    display: grid;
+    gap: 12px;
+}
+
+.archivo {
+    padding: 15px 18px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.10);
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.archivo:hover {
+    background: rgba(94, 234, 212, 0.18);
+    transform: translateX(6px);
+}
+
+.volver {
+    margin-top: 28px;
+}
+
+@media (max-width: 850px) {
+    .tarjeta-semana {
+        padding: 26px;
+    }
+
+    .encabezado-semana h1 {
+        font-size: 28px;
+    }
+}
+
+.pagina-perfil {
+    min-height: 100vh;
+}
+
+.contenedor-perfil {
+    width: 90%;
+    max-width: 900px;
+    margin: 45px auto;
+}
+
+.tarjeta-perfil {
+    padding: 45px;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(14px);
+    text-align: center;
+}
+
+.avatar-perfil {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #14b8a6, #38bdf8);
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 18px 35px rgba(20, 184, 166, 0.35);
+}
+
+.avatar-perfil span {
+    font-size: 52px;
+    font-weight: 900;
+}
+
+.tarjeta-perfil h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.tarjeta-perfil h2 {
+    font-size: 22px;
+    color: #5eead4;
+    margin-bottom: 24px;
+}
+
+.tarjeta-perfil p {
+    max-width: 720px;
+    margin: 0 auto 32px;
+    color: #dbeafe;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+@media (max-width: 850px) {
+    .tarjeta-perfil {
+        padding: 32px 24px;
+    }
+
+    .tarjeta-perfil h1 {
+        font-size: 32px;
+    }
+
+    .tarjeta-perfil h2 {
+        font-size: 19px;
+    }
+}
